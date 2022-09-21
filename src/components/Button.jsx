@@ -7,6 +7,8 @@ export default function Button({
   name,
   click,
   customStyle,
+  identifierTitle = "",
+  identifierName = "",
   isDisabled = false,
   ...props
 }) {
@@ -39,6 +41,8 @@ export default function Button({
           type="button"
           onClick={click}
           disabled={isDisabled}
+          title={identifierTitle}
+          name={identifierName}
           className={`flex items-center justify-center gap-2 px-4 py-2 rounded-3xl ${customStyle} ${
             type === "primary"
               ? "bg-primaryDefault border border-primaryDefault text-white hover:bg-gradient-to-tl hover:from-primaryDark hover:to-primaryDefault disabled:border-primaryBright disabled:bg-primaryBright disabled:hover:bg-primaryBright disabled:hover:from-primaryBright disabled:hover:to-primaryBright disabled:text-primaryLight"
