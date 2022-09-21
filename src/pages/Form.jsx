@@ -18,7 +18,16 @@ export default function Form() {
               Cancel
             </div>
           </Button>
-          <Button isDisabled={!imgFile} navigationType="button" type="primary">
+          <Button
+            isDisabled={!imgFile}
+            navigationType="button"
+            type="primary"
+            identifierTitle={
+              imgFile
+                ? "Upload file"
+                : "Can't upload before any file is selected"
+            }
+          >
             <div className="font-inter font-bold text-base leading-default text-center tracking-default">
               Upload
             </div>
