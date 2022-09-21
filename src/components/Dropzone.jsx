@@ -106,7 +106,7 @@ export default function Dropzone({setImgFile}) {
                     Drag and drop here to upload your image
                   </div>
                   <div className="font-inter not-italic font-normal text-sm text-center leading-5 tracking-default text-neutralDefault">
-                    You only can upload jpg or png file (max 5 MB)
+                    You can only upload jpg or png file (max 5 MB)
                   </div>
                 </div>
               </div>
@@ -138,8 +138,8 @@ export default function Dropzone({setImgFile}) {
           className="flex flex-col gap-8 items-center justify-center bg-neutralLight border border-dashed border-primaryDefault rounded-lg py-20 px-24 sm:px-32 md:px-40 relative"
           onDragEnter={handleDrag}
         >
-          <div className="relative">
-            <img src={imgFileUrl} alt="preview" />
+          <div className="relative max-h-[360px]">
+            <img src={imgFileUrl} alt="preview" className="h-full" />
             <button
               onClick={() => {
                 setTempImgFile(null);
